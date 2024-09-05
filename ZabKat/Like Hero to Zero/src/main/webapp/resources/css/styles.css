@@ -1,0 +1,77 @@
+/* Grundlegende Stile für den gesamten Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Sehr helles Grau für einen eleganten Hintergrund */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile für das Logo */
+#kopf_links {
+    display: block;
+    margin: 20px;
+}
+
+/* Stile für den rechten Bereich */
+#kopf_rechts {
+    float: right;
+    margin: 20px;
+    color: #333; /* Dunkelgrau für besseren Kontrast */
+}
+
+#kopf_rechts h1 {
+    color: #007bff; /* Hellblau für den Titel */
+}
+
+#kopf_rechts p {
+    font-style: italic;
+    color: #4caf50; /* Hellgrün für das Zitat */
+}
+
+/* Stil für das Formular */
+form {
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* Weißer Hintergrund für das Formular */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sanfte Schatten für einen eleganten Effekt */
+}
+
+/* Stil für die Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0; /* Sehr helles Grau für die Tabellenränder */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff; /* Hellblau für die Kopfzeile der Tabelle */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Sehr helles Grau für die alternierenden Zeilen */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Etwas dunkleres Grau für Hover-Effekte */
+}
+
+/* Stil für Links */
+a {
+    color: #007bff; /* Hellblau für Links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

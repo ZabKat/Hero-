@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+
+<h:body>
+    <img id="kopf_links" src="logo.jpg" width="250" alt='logo' />
+    <div id="kopf_rechts">
+        <h:outputText value="#{slogan}" />
+        <p>"In Harmonie mit der Natur, durch die Kraft der Vernunft" – I. Kant</p>
+        <h1>CO2 Emissions Data</h1>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <h:form>
+        <h:outputLabel for="country" value="Enter your country:" />
+        <h:inputText id="country" value="#{emissionBean.country}" />
+        <h:commandButton value="Search" action="#{emissionBean.searchEmissions}" />
+    </h:form>
+
+    <h:dataTable value="#{emissionBean.co2DataList}" var="data" border="1">
+        <h:column>
+            <f:facet name="header">Country</f:facet>
+            #{data.country}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Year</f:facet>
+            #{data.year}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Emissions</f:facet>
+            #{data.emissions}
+        </h:column>
+    </h:dataTable>
+
+    <h:commandLink value="Add Data" action="addData.xhtml?faces-redirect=true" />
+</h:body>
+</html>
